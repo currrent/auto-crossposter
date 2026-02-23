@@ -6,8 +6,8 @@ from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTyp
 from social_api import post_to_vk  # Импортируем функцию отправки
 
 load_dotenv()
-VK_GROUP_ID = os.getenv('VK_GROUP_ID')  # ID вашего сообщества (положительное число)
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
+VK_GROUP_ID = os.getenv('VK_GROUP_ID')  # ID вашего сообщества (положительное число)
 
 async def handle_new_post(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.effective_chat.type == 'channel':
